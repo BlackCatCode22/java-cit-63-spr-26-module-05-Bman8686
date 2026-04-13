@@ -1,0 +1,46 @@
+Input Scanner
+Design Document
+
+Package:
+zooKeepersChallenge
+
+Animal Info:
+arrivingAnimals.txt carries animal attributes (gender,color,weight, dob,etc.)
+animalNames.txt contains animal names
+zooPopulation.txt contains all information (including characteristics) and groups like species together
+
+Structure:
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+String arrivingFile = "arrivingAnimals.txt";
+String namesFile = "animalNames.txt";
+String reportFile = "newAnimals.txt";
+
+
+
+Code Review:
+package ZooApp;
+
+public class Animal {
+    // Encapsulation: private fields with public getters/setters
+    private String name;
+    private int age;
+    private String species;
+
+    public Animal(String name, int age, String species) {
+        this.name = name;
+        this.age = age;
+        this.species = species;
+    }
+
+    // Getters and Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+    public String getSpecies() { return species; }
+}
+
+
